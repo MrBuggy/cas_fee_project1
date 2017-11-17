@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/*
+	Open Sans (self hosting)
+*/
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("../../fonts/OpenSans-Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("../../fonts/OpenSans-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans Italic";
+  src: url("../../fonts/OpenSans-Italic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans SemiBold";
+  src: url("../../fonts/OpenSans-SemiBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../../fonts/OpenSans-Bold.ttf") format("truetype"); }
+
+/* COLORS */
+/* SPACES */
+/* RADIUS */
+/* SHADOW */
+/* BREAKPOINTS */
+/* FONTS */
+.notes__content {
+  display: flex; }
+
+/* COLORS */
+/* SPACES */
+/* RADIUS */
+/* SHADOW */
+/* BREAKPOINTS */
+/* FONTS */
+.notes__detail {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px; }
+
+.notes__forms {
+  display: flex;
+  flex-direction: column; }
+
+.notes__add-description, .notes__add-due-date, .notes__add-button {
+  margin-top: 5px; }
+
+/* COLORS */
+/* SPACES */
+/* RADIUS */
+/* SHADOW */
+/* BREAKPOINTS */
+/* FONTS */
+.notes__header {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 5px; }
+
+/* COLORS */
+/* SPACES */
+/* RADIUS */
+/* SHADOW */
+/* BREAKPOINTS */
+/* FONTS */
+.notes__overview {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.notes__item, .notes__item-done {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid gainsboro;
+  padding: 20px 5px;
+  margin-bottom: 5px;
+  transition: background-color 0.5s ease;
+  color: black; }
+  .notes__item:last-child, .notes__item-done:last-child {
+    border-bottom: none; }
+  .notes__item:hover, .notes__item-done:hover {
+    background-color: #e6e6e6;
+    border-radius: 3px;
+    cursor: pointer; }
+  .notes__item:before, .notes__item-done:before {
+    content: '';
+    width: 7px;
+    height: 100%;
+    background: #FFB7C1;
+    position: absolute;
+    left: 0;
+    display: block; }
+
+.notes__item-done:before {
+  background: #18B1AA; }
+
+.notes__left, .notes__right {
+  display: flex;
+  align-items: center; }
+
+.notes__left {
+  flex-direction: column;
+  padding-left: 10px;
+  text-align: start;
+  align-items: start; }
+
+.notes__right {
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px; }
+
+.notes__title {
+  font-family: "Open Sans SemiBold"; }
+
+.notes__description {
+  font-size: 12px;
+  max-width: 250px; }
+
+.notes__due-date {
+  font-size: 12px;
+  font-family: "Open Sans SemiBold";
+  padding-right: 10px;
+  position: relative; }
+
+.notes__commands {
+  display: flex; }
+  .notes__commands button {
+    margin-left: 5px; }
+
+.notes__high-priority {
+  text-transform: uppercase;
+  font-size: 7px;
+  background-color: #B22222;
+  color: white;
+  font-family: "Open Sans SemiBold";
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+@media (min-width: 500px) {
+  .notes__description {
+    max-width: 700px; } }
+
+/* COLORS */
+/* SPACES */
+/* RADIUS */
+/* SHADOW */
+/* BREAKPOINTS */
+/* FONTS */
+html, body {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Open Sans Light";
+  background-color: #f0f0f0; }
+
+.notes__page {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px; }
+
+.notes__container {
+  background-color: white;
+  box-shadow: 0px 1px 1px 1px #c8c8c8;
+  -webkit-box-shadow: 0px 1px 1px 1px #c8c8c8;
+  -moz-box-shadow: 0px 1px 1px 1px #c8c8c8; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+h1 {
+  color: #2F4E4F;
+  font-size: 21px; }
+
+input, textarea {
+  outline: none;
+  box-shadow: 0px 1px 1px 1px #c8c8c8;
+  -webkit-box-shadow: 0px 1px 1px 1px #c8c8c8;
+  -moz-box-shadow: 0px 1px 1px 1px #c8c8c8;
+  border: 1px solid gainsboro;
+  padding: 5px 10px;
+  font-family: "Open Sans Light"; }
+
+button, .notes__button-transparent, .notes__button-done, .notes__button-undo, .notes__button-delete {
+  border: none;
+  border-radius: 3px;
+  background-color: #778799;
+  color: white;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+  outline: none;
+  box-shadow: 0px 1px 1px 1px #c8c8c8;
+  -webkit-box-shadow: 0px 1px 1px 1px #c8c8c8;
+  -moz-box-shadow: 0px 1px 1px 1px #c8c8c8;
+  font-family: "Open Sans SemiBold";
+  text-transform: uppercase;
+  width: 100px; }
+  button:hover, .notes__button-transparent:hover, .notes__button-done:hover, .notes__button-undo:hover, .notes__button-delete:hover {
+    cursor: pointer;
+    background-color: #5f6e7e; }
+
+.notes__button-transparent {
+  background-color: transparent;
+  color: #778799; }
+  .notes__button-transparent:hover {
+    color: white; }
+
+.notes__button-done:hover {
+  background-color: #18B1AA; }
+
+.notes__button-undo:hover {
+  background-color: #FFB7C1; }
+
+.notes__button-delete:hover {
+  background-color: #c72626; }
+
+.hidden-fields {
+  display: none; }
+
+/* COLORS */
+/* SPACES */
+/* RADIUS */
+/* SHADOW */
+/* BREAKPOINTS */
+/* FONTS */

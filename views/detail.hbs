@@ -1,0 +1,13 @@
+<div class="notes__container notes__detail">
+	<h1>Notiz erstellen</h1>
+	<form class="notes__forms" action="/insert" method="post">
+		<input type="text" class="notes__add-title" name="title" placeholder="Titel">
+		<textarea name="description" class="notes__add-description" cols="30" rows="10" placeholder="Beschreibung"></textarea>
+		<input type="text" class="notes__add-due-date" name="dueDate" placeholder="Fälligkeitsdatum">
+		<input type="checkbox" name="done" class="notes__add-done" id="done_id">
+		<label for="done_id">Erledigt</label>
+		<input type="checkbox" name="highPriority" class="notes__add-done" id="priority_id">
+		<label for="priority_id">Hohe Priorität</label>
+		<button class="notes__add-button" type="submit">Speichern</button>
+	</form>
+</div>

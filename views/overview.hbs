@@ -1,0 +1,67 @@
+<div class="notes__container notes__header">
+    <a href="/openDetail">
+        <button class="notes__add">Neu</button>
+    </a>
+</div>
+<div class="notes__content">
+    <div class="notes__overview">
+        {{#each items}}
+        <div class="notes__container notes__item{{#if done}} notes__item-done{{/if}}">
+            <div class="notes__left">
+                <div class="notes__title">
+                    {{title}}
+                </div>
+                <div class="notes__description">
+                    {{description}}
+                </div>
+
+            </div>
+            <div class="notes__right">
+                <div class="notes__due-date">
+                    Fälligkeit: {{dueDate}}
+                </div>
+                {{#if highPriority}}
+                    <div class="notes__high-priority">
+                        Wichtig
+                    </div>
+                {{/if}}
+                <div class="notes__commands">
+                    {{#if done}}
+                    <form action="/setDone" method="post">
+                        <input type="text" class="hidden-fields" name="id" value="{{_id}}">
+                        <input type="text" class="hidden-fields" name="done" value="false">
+                        <button class="notes__button-transparent notes__button-undo" type="submit">Offen</button>
+                    </form>
+                    {{else}}
+                        <form action="/setDone" method="post">
+                            <input type="text" class="hidden-fields" name="id" value="{{_id}}">
+                            <input type="text" class="hidden-fields" name="done" value="true">
+                            <button class="notes__button-transparent notes__button-done">Erledigt</button>
+                        </form>
+                    {{/if}}
+                    <form action="/openEdit" method="post">
+                        <input type="text" class="hidden-fields" name="id" value="{{_id}}">
+                        <input type="text" class="hidden-fields" name="title" value="{{title}}">
+                        <input type="text" class="hidden-fields" name="description" value="{{description}}">
+                        <input type="text" class="hidden-fields" name="dueDate" value="{{dueDate}}">
+                        <input type="text" class="hidden-fields" name="done" value="{{done}}">
+                        <input type="text" class="hidden-fields" name="priority" value="{{priority}}">
+                        <button class="notes__button-transparent" type="submit">Bearbeiten</button>
+                    </form>
+                    
+                    <form action="/delete" method="post">
+                        <input type="text" class="hidden-fields" name="id" value="{{_id}}">
+                        <input type="text" class="hidden-fields" name="title" value="{{title}}">
+                        <input type="text" class="hidden-fields" name="description" value="{{description}}">
+                        <input type="text" class="hidden-fields" name="dueDate" value="{{dueDate}}">
+                        <input type="text" class="hidden-fields" name="done" value="{{done}}">
+                        <input type="text" class="hidden-fields" name="highPriority" value="{{highPriority}}">
+                        <button class="notes__button-transparent notes__button-delete" type="submit">Löschen</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+

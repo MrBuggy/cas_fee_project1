@@ -1,0 +1,9 @@
+@import './basics/variables.scss';
+
+.notes {
+	&__header {
+		display: flex;
+		padding: $space-10;
+		margin-bottom: $space-5;
+	}
+}

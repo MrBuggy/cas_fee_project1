@@ -1,0 +1,39 @@
+/* COLORS */
+$white: white;
+$black: black;
+$light-gray: rgb(200, 200, 200);
+$light-gray1: rgb(210, 210, 210);
+$light-gray2: rgb(220, 220, 220);
+$light-gray3: rgb(230, 230, 230);
+$light-gray4: rgb(240, 240, 240);
+$lightpink: #FFB7C1;
+$lightskyblue: #89CCFA;
+$lightseagreen: #18B1AA;
+$lightslategray: #778799;
+$darkslategray: #2F4E4F;
+$firebrick: #B22222;
+
+/* SPACES */
+$space-2: 2px;
+$space-5: 5px;
+$space-7: 7px;
+$space-10: 10px;
+$space-20: 20px;
+
+/* RADIUS */
+$radius-3: 3px;
+$radius-5: 5px;
+$radius-10: 10px;
+
+/* SHADOW */
+$box-shadow: 0px 1px 1px 1px $light-gray;
+
+/* BREAKPOINTS */
+$bp-mobile: 500px;
+
+/* FONTS */
+$os-light: 'Open Sans Light';
+$os-regular: 'Open Sans Regular';
+$os-italic: 'Open Sans Italic';
+$os-semibold: 'Open Sans SemiBold';
+$os-bold: 'Open Sans Bold';

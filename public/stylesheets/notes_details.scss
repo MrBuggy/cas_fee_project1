@@ -1,0 +1,18 @@
+@import './basics/variables.scss';
+
+.notes {
+	&__detail {
+		display: flex;
+		flex-direction: column;
+		padding: $space-10 $space-20;
+	}
+	&__forms {
+		display: flex;
+		flex-direction: column;
+	}
+	&__add-description,
+	&__add-due-date,
+	&__add-button {
+		margin-top: $space-5;
+	}
+}

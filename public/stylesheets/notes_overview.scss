@@ -1,0 +1,111 @@
+@import './basics/variables.scss';
+
+.notes {
+    &__overview {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border-bottom: 1px solid $light-gray2;
+        padding: $space-20 $space-5;
+        margin-bottom: $space-5;
+        transition: background-color 0.5s ease;
+        color: $black;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background-color: $light-gray3;
+            border-radius: $radius-3;
+            cursor: pointer;
+        }
+        &:before {
+            content: '';
+            width: 7px;
+            height: 100%;
+            background: $lightpink;
+            position: absolute;
+            left: 0;
+            display: block;
+        }
+    }
+
+    &__item-done {
+        @extend .notes__item;
+        &:before {
+            background: $lightseagreen;
+        }
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left {
+        flex-direction: column;
+        padding-left: $space-10;
+        text-align: start;
+        align-items: start;   
+    }
+
+    &__right {
+        padding-right: $space-10;
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+    }
+
+    &__title {
+        font-family: $os-semibold;
+    }
+
+    &__description {
+        font-size: 12px;
+        max-width: 250px;
+    }
+
+    &__due-date {
+        font-size: 12px;
+        font-family: $os-semibold;
+        padding-right: $space-10;
+        position: relative;
+    }
+    
+    &__commands {
+        display: flex;
+        button {
+            margin-left: $space-5;
+        }
+    }
+
+    &__high-priority {
+        text-transform: uppercase;
+        font-size: 7px;
+        background-color: $firebrick;
+        color: $white;
+        font-family: $os-semibold;
+        padding: $space-5 $space-10;
+        border-radius: $radius-5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: $bp-mobile) {
+    .notes {
+        &__description {
+            max-width: 700px;
+        } 
+    }
+}

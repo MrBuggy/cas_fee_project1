@@ -1,0 +1,98 @@
+@import './variables.scss';
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: $os-light;
+    background-color: $light-gray4;
+}
+
+.notes {
+    &__page {
+        display: flex;
+        flex-direction: column;
+        padding: $space-5 $space-10;
+    }
+    &__container {
+        background-color: $white;
+        box-shadow: $box-shadow;
+        -webkit-box-shadow: $box-shadow;
+        -moz-box-shadow: $box-shadow;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+h1 {
+    color: $darkslategray;
+    font-size: 21px;
+}
+
+input, textarea {
+    outline: none;
+    box-shadow: $box-shadow;
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    border: 1px solid $light-gray2;
+    padding: $space-5 $space-10;
+    font-family: $os-light;
+}
+
+button {
+    border: none;
+    border-radius: $radius-3;
+    background-color: $lightslategray;
+    color: white;
+    padding: $space-5 $space-10;
+    transition: background-color 0.3s ease;
+    outline: none;
+    box-shadow: $box-shadow;
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    font-family: $os-semibold;
+    text-transform: uppercase;
+    width: 100px;
+    &:hover {
+        cursor: pointer;
+        background-color: darken($lightslategray, 10);
+    }
+}
+
+.notes__button-transparent {
+    @extend button;
+    background-color: transparent;
+    color: $lightslategray;
+    &:hover {
+        color: $white;
+    }
+}
+
+.notes__button-done {
+    @extend button;
+    &:hover {
+        background-color: $lightseagreen;
+    }
+}
+
+.notes__button-undo {
+    @extend button;
+    &:hover {
+        background-color: $lightpink;
+    }
+}
+
+.notes__button-delete {
+    @extend button;
+    &:hover {
+        background-color: lighten($firebrick, 5);
+    }
+}
+
+.hidden-fields {
+    display: none;
+}

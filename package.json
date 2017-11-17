@@ -1,0 +1,28 @@
+{
+  "name": "noteapp",
+  "version": "1.0.0",
+  "description": "Project 1 note app CAS FEE 2017",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node express.js"
+  },
+  "author": "Srdan Turudic",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.3.0",
+    "mongoose": "^4.13.2",
+    "normalize.css": "^7.0.0"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
